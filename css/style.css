@@ -100,8 +100,7 @@ body{ font-family:"微软雅黑";}
     background-color:#fff;
 	border:1px solid #fff;
 	}
-		
-	
+
 /* Mobile Layout: 480px and below. */
 #ddd{ z-index:1;}
 #coutent_center{
@@ -167,16 +166,18 @@ body{ font-family:"微软雅黑";}
 }
 #div4 .go{
 	display: inline-block;
-    padding: 0.8em 4em;
-    color: rgb(195, 13, 35);
-    background: #fff;
-    border-radius: 4px;
-    font-size: 1em;
-    font-weight: 900;
-    letter-spacing: 2px;
 	z-index:10;	
+	background-size: 100%;
+	width: 80%;
+	height: 4rem;
 }
-
+		
+.gotoone{
+	background: url(../images/btn1.png) top left no-repeat;
+}
+.gototwo{
+	background: url(../images/btn2.png) top left no-repeat;
+}	
 #search{
 	position:relative;
 	animation-delay:1.5s;
@@ -426,6 +427,7 @@ footer{
 	-moz-animation-delay:3.5s;
 	z-index:10;
 	text-align: center;
+	margin-bottom: 1rem;
 }
 footer .go{
 	display: inline-block;
