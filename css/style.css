@@ -126,6 +126,7 @@ body{ font-family:"微软雅黑";}
 	padding-right: 2.275%;
 	clear: none;
 	float: none;
+	margin-top: -1rem;
 }
 #div1 {
 	animation-delay: 1s;
