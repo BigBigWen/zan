@@ -37,7 +37,7 @@
       <div class="content_list_li_right_li"><strong>所在部门：</strong><span class="userbumen"></span></div>
       <div class="content_list_li_right_li"><strong>参选人员：</strong><span class="pName"></span></div>
       <div class="content_list_li_right_li_a">
-        <a id="007" class="btn to t1" ></a>
+        <a id="001" class="btn to t1" ></a>
         <a class="btn to on" >已获得<span></span>票</a>
       </div>
     </div>
@@ -58,7 +58,7 @@
       <div class="content_list_li_right_li"><strong>所在部门：</strong><span class="userbumen"></span></div>
       <div class="content_list_li_right_li"><strong>参选人员：</strong><span class="pName"></span></div>
       <div class="content_list_li_right_li_a">
-        <a id="007" class="btn to t1" ></a>
+        <a id="002" class="btn to t1" ></a>
         <a class="btn to on" >已获得<span></span>票</a>
       </div>
     </div>
@@ -79,7 +79,7 @@
       <div class="content_list_li_right_li"><strong>所在部门：</strong><span class="userbumen"></span></div>
       <div class="content_list_li_right_li"><strong>参选人员：</strong><span class="pName"></span></div>
       <div class="content_list_li_right_li_a">
-        <a id="007" class="btn to t1" ></a>
+        <a id="003" class="btn to t1" ></a>
         <a class="btn to on" >已获得<span></span>票</a>
       </div>
     </div>
@@ -192,14 +192,15 @@
                   // swal('投票失败!', '每个节目您只有一次投票机会！', 'error');
                   $(this).html("已投票").css("background-color","#ccc");
                 console.log("已点击过");
-                 //return;
+                 return;
             }
 
        var queryZan = new Bmob.Query(ZanCount);
         queryZan.equalTo("userid", btnId);
-        
+        console.log("btnId---" + btnId);
         queryZan.first({
             success: function(object) {
+              console.log(object);
             // 查询成功
             objId = object.id;
             objcount = object.get("count");

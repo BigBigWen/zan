@@ -36,7 +36,7 @@
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
             <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName">歌曲《告白气球》</span></div>
             <div class="content_list_li_right_li_a">
-                <a id="010" class="btn to t1">投我吧</a>
+                <a id="001" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
             </div>
         </div>
@@ -56,7 +56,7 @@
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
             <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName">舞蹈《nobody＋夜空下》</span></div>
             <div class="content_list_li_right_li_a">
-                <a id="010" class="btn to t1">投我吧</a>
+                <a id="002" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
             </div>
         </div>
@@ -76,7 +76,7 @@
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
             <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName">小品《计划去旅行》</span></div>
             <div class="content_list_li_right_li_a">
-                <a id="010" class="btn to t1">投我吧</a>
+                <a id="003" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
             </div>
         </div>
@@ -96,7 +96,7 @@
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
             <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName"></span></div>
             <div class="content_list_li_right_li_a">
-                <a id="010" class="btn to t1">投我吧</a>
+                <a id="004" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
             </div>
         </div>
@@ -116,7 +116,7 @@
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
             <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName"></span></div>
             <div class="content_list_li_right_li_a">
-                <a id="010" class="btn to t1">投我吧</a>
+                <a id="005" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
             </div>
         </div>
@@ -136,7 +136,7 @@
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
             <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName"></span></div>
             <div class="content_list_li_right_li_a">
-                <a id="010" class="btn to t1">投我吧</a>
+                <a id="006" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
             </div>
         </div>
@@ -156,7 +156,7 @@
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
             <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName"></span></div>
             <div class="content_list_li_right_li_a">
-                <a id="010" class="btn to t1">投我吧</a>
+                <a id="007" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
             </div>
         </div>
@@ -176,7 +176,7 @@
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
             <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName"></span></div>
             <div class="content_list_li_right_li_a">
-                <a id="010" class="btn to t1">投我吧</a>
+                <a id="008" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
             </div>
         </div>
@@ -196,7 +196,7 @@
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
             <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName"></span></div>
             <div class="content_list_li_right_li_a">
-                <a id="010" class="btn to t1">投我吧</a>
+                <a id="009" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
             </div>
         </div>
@@ -318,7 +318,7 @@
                 console.log("已点击过");
                   // swal('投票失败!', '每个节目您只有一次投票机会！', 'error');
                    $(this).html("已投票").css("background-color","#ccc");
-                 // return;
+                 return;
             }
 
        var queryZan = new Bmob.Query(ZanCount);
@@ -326,6 +326,7 @@
         
         queryZan.first({
             success: function(object) {
+                console.log(object);
             // 查询成功
             objId = object.id;
             objcount = object.get("count");
