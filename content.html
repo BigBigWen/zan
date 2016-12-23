@@ -34,7 +34,7 @@
         <div class="content_list_li_left">
             <span class="imgbox"><img src="images/project001.jpg" ></span>
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
-            <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName"></span></div>
+            <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName">歌曲《告白气球》</span></div>
             <div class="content_list_li_right_li_a">
                 <a id="010" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
@@ -54,7 +54,7 @@
         <div class="content_list_li_left">
             <span class="imgbox"><img src="images/project002.png" ></span>
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
-            <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName"></span></div>
+            <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName">舞蹈《nobody＋夜空下》</span></div>
             <div class="content_list_li_right_li_a">
                 <a id="010" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
@@ -74,7 +74,7 @@
         <div class="content_list_li_left">
             <span class="imgbox"><img src="images/project003.jpg" ></span>
            <div class="content_list_li_right_li"><strong>节目编号</strong><span class="jiemunom"></span></div>
-            <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName"></span></div>
+            <div class="content_list_li_right_li"><strong>节目名称：</strong><span class="jiemuName">小品《计划去旅行》</span></div>
             <div class="content_list_li_right_li_a">
                 <a id="010" class="btn to t1">投我吧</a>
                 <a class="btn to on" >已获得<span></span>票</a>
@@ -271,7 +271,7 @@
           var projectId = object.get('userId')
            var countNum = object.get('count');
           $(".content_list_li").eq(i).find('.jiemunom').html( projectId );
-          $(".content_list_li").eq(i).find('.jiemuName').html( object.get('userName') );
+         // $(".content_list_li").eq(i).find('.jiemuName').html( object.get('userName') );
           // $(".content_list_li").eq(i).find('.content_list_li_right>.text p').html( object.get('detail') );
 
           $(".content_list_li>.content_list_li_left>.content_list_li_right_li_a>.on span").eq(i).html(countNum);
@@ -316,7 +316,8 @@
                 console.log("未点击过");
             }else{
                 console.log("已点击过");
-                  swal('投票失败!', '每个节目您只有一次投票机会！', 'error');
+                  // swal('投票失败!', '每个节目您只有一次投票机会！', 'error');
+                   $(this).html("已投票").css("background-color","#ccc");
                  return;
             }
 
