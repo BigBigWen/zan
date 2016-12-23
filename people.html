@@ -32,7 +32,7 @@
 <div id="content_list" class="gridContainer clearfix bounceInDown animated">
   <div class="content_list_li">
     <div class="content_list_li_left">
-      <span class="imgbox"><img src="images/img.jpg" ></span>
+      <span class="imgbox"><img src="images/touch001.png" ></span>
       <div class="content_list_li_right_li"><strong>员工编号：</strong><span class="userid"></span></div>
       <div class="content_list_li_right_li"><strong>员工部门：</strong><span class="userbumen"></span></div>
       <div class="content_list_li_right_li"><strong>员工姓名：</strong><span class="pName"></span></div>
@@ -53,10 +53,10 @@
 <div id="content_list" class="gridContainer clearfix bounceInDown animated">
   <div class="content_list_li">
     <div class="content_list_li_left">
-      <span class="imgbox"><img src="images/img.jpg" ></span>
-      <div class="content_list_li_right_li"><strong>员工编号：</strong><span class="userid"></span></div>
-      <div class="content_list_li_right_li"><strong>员工部门：</strong><span class="userbumen"></span></div>
-      <div class="content_list_li_right_li"><strong>员工姓名：</strong><span class="pName"></span></div>
+      <span class="imgbox"><img src="images/touch002.png" ></span>
+      <div class="content_list_li_right_li"><strong>编号：</strong><span class="userid"></span></div>
+      <div class="content_list_li_right_li"><strong>所在部门：</strong><span class="userbumen"></span></div>
+      <div class="content_list_li_right_li"><strong>参选人员：</strong><span class="pName"></span></div>
       <div class="content_list_li_right_li_a">
         <a id="007" class="btn to t1" ></a>
         <a class="btn to on" >已获得<span></span>票</a>
@@ -64,7 +64,7 @@
     </div>
     <div class="content_list_li_right">
       <div class="text">
-        <b>个人简介</b>
+        <b>事迹简介</b>
         <p></p>
       </div>
     </div>
@@ -74,10 +74,10 @@
 <div id="content_list" class="gridContainer clearfix bounceInDown animated">
   <div class="content_list_li">
     <div class="content_list_li_left">
-      <span class="imgbox"><img src="images/img.jpg" ></span>
-      <div class="content_list_li_right_li"><strong>员工编号：</strong><span class="userid"></span></div>
-      <div class="content_list_li_right_li"><strong>员工部门：</strong><span class="userbumen"></span></div>
-      <div class="content_list_li_right_li"><strong>员工姓名：</strong><span class="pName"></span></div>
+      <span class="imgbox"><img src="images/touch003.jpg" ></span>
+      <div class="content_list_li_right_li"><strong>编号：</strong><span class="userid"></span></div>
+      <div class="content_list_li_right_li"><strong>所在部门：</strong><span class="userbumen"></span></div>
+      <div class="content_list_li_right_li"><strong>参选人员：</strong><span class="pName"></span></div>
       <div class="content_list_li_right_li_a">
         <a id="007" class="btn to t1" ></a>
         <a class="btn to on" >已获得<span></span>票</a>
@@ -85,7 +85,7 @@
     </div>
     <div class="content_list_li_right">
       <div class="text">
-        <b>个人简介</b>
+        <b>事迹简介</b>
         <p></p>
       </div>
     </div>
@@ -129,6 +129,15 @@
       success: function(results) {
         //results.ascending("result.get(userid")
         console.log(results);
+        //对查询到的数组对象进行排序
+         var results = results.sort(  
+                function(a, b)  
+                {  
+                    if(a.get('userid') < b.get('userid')) return -1;  
+                    if(a.get('userid') > b.get('userid')) return 1;  
+                    return 0;  
+                }  
+            );  
         console.log("共查询到 " + results.length + " 条记录");
         // 循环处理查询到的数据
         var countArr = [];
